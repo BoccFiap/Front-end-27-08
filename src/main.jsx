@@ -4,6 +4,7 @@ import { createRoot } from 'react-dom/client'
 import { createBrowserRouter, RouterProvider } from 'react-router-dom'  
 import App from './App.jsx'
 import Error from './routes/Error.jsx'
+import Aluno from './routes/Aluno.jsx'
 
 /*Criando a funcao createBrowserRouter */
 const router= createBrowserRouter([
@@ -11,6 +12,13 @@ const router= createBrowserRouter([
     /* CRIANDO OS ELEMENTOS PAI */
     path:'/', elemento:<App/>,
     errorElement:<Error/>,
+
+    //CRIANDO ELEMENTOS FILHOS
+
+    children:[
+      {path:'/', element:<Home/>},
+      {path:'/aluno', element:<Aluno/>},
+    ]
   }
 ])
 
