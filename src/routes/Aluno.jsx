@@ -1,10 +1,14 @@
+import {Dados} from '../components/Dados'
+
 const Aluno=()=>{
+    //criando A desestruturacao
+    const{ nome, email, idade} = Dados
     return(
         <>
         <h1>Página Aluno</h1>
-        <p>Nome do Aluno: </p>
-        <p>Email do Aluno: </p>
-        <p>Idade do Aluno: </p>
+        <p>Nome do Aluno:{nome} </p>
+        <p>Email do Aluno:{email} </p>
+        <p>Idade do Aluno:{idade} </p>
         </>
     )
 }
